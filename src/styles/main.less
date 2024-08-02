@@ -1,0 +1,82 @@
+@import "reset";
+@import "maps";
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+body {
+    background-color: @colors[bgColor];
+    color: @colors[textColor];
+}
+
+.container {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: @colors[headerColor];
+    text-align: center;
+    height: 30vh;
+
+    .container {
+        position: relative;
+        bottom: -50%;
+    }
+}
+
+.profile-avatar {
+    border-radius: 50%;
+    margin-bottom: 24px;
+    width: 180px;
+    height: 180px;
+    transition: all .5s ease;
+
+    &:hover {
+        filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+        transform: scale(1.02);
+        transition: all .5s ease;
+    }
+}
+
+.profile-name {
+    font-size: 2em;
+}
+
+.profile-username {
+    margin: 16px 0 32px;
+    font-size: 1.1em;
+}
+
+.profile-link {
+    background-color: @colors[headerColor];
+    color: @colors[textColor];
+    padding: 8px 16px;
+    display: inline-block;
+    margin-top: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all .5s ease;
+
+    &:hover {
+        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+        background-color: darken(@colors[headerColor], 10%);
+        transform: scale(1.02);
+        transition: all .5s ease;
+    }
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.numbers-item {
+    font-size: 3em;
+    font-weight: bold;
+
+    h4 {
+    font-size: .3em;
+    }
+}
